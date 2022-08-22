@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Студія</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
@@ -32,8 +34,12 @@
           </ul>
         </nav>
         <ul class="contacts">
-          <li class="contacts-item"><a href="mailto:info@devstudio.com">info@devstudio.com</a></li>
-          <li class="contacts-item"><a href="tel:+380961111111">+38 096 111 11 11</a></li>
+          <li class="contacts-item">
+            <a class="mail" href="mailto:info@devstudio.com">info@devstudio.com</a>
+          </li>
+          <li class="contacts-item">
+            <a class="tel" href="tel:+380961111111">+38 096 111 11 11</a>
+          </li>
         </ul>
       </div>
     </header>
@@ -118,6 +124,12 @@
               <div class="team-name">
                 <h3>Ігор Дем'яненко</h3>
                 <p lang="En">Product Designer</p>
+                <ul class="cocial-list">
+                  <li class="item"><a href="" class="link instagram"></a></li>
+                  <li class="item"><a href="" class="link twitter"></a></li>
+                  <li class="item"><a href="" class="link facebook"></a></li>
+                  <li class="item"><a href="" class="link linkedin"></a></li>
+                </ul>
               </div>
             </li>
 
@@ -126,6 +138,12 @@
               <div class="team-name">
                 <h3>Ольга Рєпіна</h3>
                 <p lang="En">Frontend Developer</p>
+                <ul class="cocial-list">
+                  <li class="item"><a href="" class="link instagram"></a></li>
+                  <li class="item"><a href="" class="link twitter"></a></li>
+                  <li class="item"><a href="" class="link facebook"></a></li>
+                  <li class="item"><a href="" class="link linkedin"></a></li>
+                </ul>
               </div>
             </li>
 
@@ -134,6 +152,12 @@
               <div class="team-name">
                 <h3>Микола Тарасов</h3>
                 <p lang="En">Marketing</p>
+                <ul class="cocial-list">
+                  <li class="item"><a href="" class="link instagram"></a></li>
+                  <li class="item"><a href="" class="link twitter"></a></li>
+                  <li class="item"><a href="" class="link facebook"></a></li>
+                  <li class="item"><a href="" class="link linkedin"></a></li>
+                </ul>
               </div>
             </li>
 
@@ -142,33 +166,76 @@
               <div class="team-name">
                 <h3>Михайло Єрмаков</h3>
                 <p lang="En">UI Designer</p>
+                <ul class="cocial-list">
+                  <li class="item"><a href="" class="link instagram"></a></li>
+                  <li class="item"><a href="" class="link twitter"></a></li>
+                  <li class="item"><a href="" class="link facebook"></a></li>
+                  <li class="item"><a href="" class="link linkedin"></a></li>
+                </ul>
               </div>
             </li>
           </ul>
         </div>
       </section>
+
+      <!--
+        |============================
+        | ПОСТІЙНІ КЛІЄНТИ
+        |============================
+      -->
+
+      <section class="section-clients">
+        <div class="container">
+          <h2>Постійні клієнти</h2>
+          <ul class="list">
+            <li class="item"><a href="" class="link">1</a></li>
+            <li class="item"><a href="" class="link">2</a></li>
+            <li class="item"><a href="" class="link">3</a></li>
+            <li class="item"><a href="" class="link">4</a></li>
+            <li class="item"><a href="" class="link">5</a></li>
+            <li class="item"><a href="" class="link">6</a></li>
+          </ul>
+        </div>
+      </section>
     </main>
 
-    <!-- Підвал сторінки Студія -->
+    <!--
+      |============================
+      | Підвал сторінки Студія
+      |============================
+    -->
 
     <footer class="footer">
-      <div class="container">
-        <a href="./index.html" class="logo-web">Web<span class="logo-studio">Studio</span></a>
-        <address class="footer-address">
-          <ul class="address-list">
-            <li class="address-item">
-              <a
-                class="address"
-                href="https://goo.gl/maps/hQi6V8cCwgHhLjm26"
-                target="_blank"
-                rel="nofollow noopener noreffer"
-                >м. Київ, пр-т Лесі Українки, 26</a
-              >
-            </li>
-            <li class="address-item"><a href="mailto:info@devstudio.com">info@devstudio.com</a></li>
-            <li class="address-item"><a href="tel:+380961111111">+38 096 111 11 11</a></li>
+      <div class="container footer-flex">
+        <div>
+          <a href="./index.html" class="logo-web">Web<span class="logo-studio">Studio</span></a>
+          <address class="footer-address">
+            <ul class="address-list">
+              <li class="address-item">
+                <a
+                  class="address"
+                  href="https://goo.gl/maps/hQi6V8cCwgHhLjm26"
+                  target="_blank"
+                  rel="nofollow noopener noreffer"
+                  >м. Київ, пр-т Лесі Українки, 26</a
+                >
+              </li>
+              <li class="address-item">
+                <a href="mailto:info@devstudio.com">info@devstudio.com</a>
+              </li>
+              <li class="address-item"><a href="tel:+380961111111">+38 096 111 11 11</a></li>
+            </ul>
+          </address>
+        </div>
+        <div class="social">
+          <p class="social-title">Приєднуйтесь</p>
+          <ul class="list">
+            <li class="item"><a href="" class="link instagram"></a></li>
+            <li class="item"><a href="" class="link twitter"></a></li>
+            <li class="item"><a href="" class="link facebook"></a></li>
+            <li class="item"><a href="" class="link linkedin"></a></li>
           </ul>
-        </address>
+        </div>
       </div>
     </footer>
   </body>

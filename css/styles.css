@@ -23,12 +23,20 @@ body {
   margin: 0;
 }
 
+/**
+  |============================
+  | RESET
+  |============================
+*/
+
 /* скидання деяких налаштувань списків та посилань */
-ul {
+ul,
+ol {
   list-style: none;
 }
 a {
   text-decoration: none;
+  color: currentColor;
 }
 /* скидаємо MARGIN де це потрібно */
 ul,
@@ -44,7 +52,11 @@ img {
   display: block;
 }
 
-/* КОНТЕЙНЕР */
+/**
+  |============================
+  | КОНТЕЙНЕР
+  |============================
+*/
 
 .container {
   width: 1200px;
@@ -127,7 +139,34 @@ img {
   margin-left: auto;
 }
 .header .contacts-item:not(:last-child) {
-  margin-right: 50px;
+  margin-right: 30px;
+}
+
+.header .mail,
+.header .tel {
+  display: flex;
+  align-items: center;
+}
+
+/* Додаємо іконки */
+
+.header .mail::before,
+.header .tel::before {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  margin-right: 10px;
+}
+
+.tel::before {
+  background-image: url('../images/icons/smartphone.svg');
+}
+.mail::before {
+  background-image: url(../images/icons/envelope.svg);
 }
 
 /* Основний контент сторінки Студія */
@@ -137,9 +176,17 @@ img {
 .hero {
   padding-top: 200px;
   padding-bottom: 200px;
+  margin-left: auto;
+  margin-right: auto;
 
+  max-width: 1600px;
+  min-height: 600px;
   background-color: #2f303a;
   text-align: center;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/bg-images/hero-bg.jpg);
+  background-size: cover;
+  background-position: center;
 }
 
 .hero-title {
@@ -217,10 +264,36 @@ img {
   margin-right: 30px;
 }
 
+/* Особливості іконки */
+
+.feature-list .item::before {
+  content: '';
+  display: block;
+  height: 120px;
+  margin-bottom: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 70px;
+  background-color: var(--secondary-bg-color);
+}
+.feature-list .item:nth-child(1):before {
+  background-image: url(../images/icons/antenna.svg);
+}
+.feature-list .item:nth-child(2):before {
+  background-image: url(../images/icons/clock.svg);
+}
+.feature-list .item:nth-child(3):before {
+  background-image: url(../images/icons/diagram.svg);
+}
+.feature-list .item:nth-child(4):before {
+  background-image: url(../images/icons/astronaut.svg);
+}
+
 /* "Чим ми займаємося" AND "Наша команда" */
 
 .section-work h2,
-.section-team h2 {
+.section-team h2,
+.section-clients h2 {
   margin-bottom: 50px;
 
   color: var(--title-text-color);
@@ -264,6 +337,18 @@ img {
   text-align: center;
 }
 
+.team-list .item {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+/* TEAM SOCIAL */
+
+.section-team .social-list {
+  display: flex;
+}
+
 /* FLEX Чим займаємося та команда */
 
 .section-work .work-list,
@@ -274,6 +359,21 @@ img {
   margin-right: 30px;
 }
 .team-list .item:not(:last-child) {
+  margin-right: 30px;
+}
+
+/* СЕКЦІЯ КЛІЄНТИ */
+
+.section-clients {
+  padding-top: var(--section-padding-gap);
+  padding-bottom: var(--section-padding-gap);
+}
+
+.section-clients .list {
+  display: flex;
+  justify-content: center;
+}
+.section-clients .item:not(:last-child) {
   margin-right: 30px;
 }
 
@@ -315,8 +415,76 @@ footer .logo-studio {
   margin-bottom: 9px;
 }
 
-/* Main content of a page Portfolio */
+/* FOOTER SOCIAL */
 
+.footer-flex {
+  display: flex;
+}
+
+.social {
+  margin-left: 70px;
+  padding-top: 12px;
+}
+
+.footer .social-title {
+  margin-bottom: 20px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: calc(16px / 14px);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--white-text-color);
+}
+
+.social .list {
+  display: flex;
+}
+
+.social .item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social .link {
+  display: block;
+  width: 44px;
+  height: 44px;
+  background-color: rgba(0, 0, 0, 0.1);
+
+  background-size: 20px 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+}
+
+.social .link:hover,
+.social .link:focus {
+  background-color: var(--accent-bg-color);
+  cursor: pointer;
+}
+
+.social .link.instagram {
+  background-image: url(../images/icons/instagram.svg);
+}
+.social .link.twitter {
+  background-image: url(../images/icons/twitter.svg);
+}
+.social .link.facebook {
+  background-image: url(../images/icons/facebook.svg);
+}
+.social .link.linkedin {
+  background-image: url(../images/icons/linkedin.svg);
+}
+
+/**
+  |============================
+  | Main content of a page Portfolio
+  |============================
+*/
+/**
+   |============================
+*/
 .filters .button {
   display: inline-block;
   padding: 6px 22px;
