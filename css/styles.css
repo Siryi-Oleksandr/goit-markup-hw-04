@@ -1,6 +1,5 @@
-/* Головна палітра кольорів */
-
 :root {
+  /* Головна палітра кольорів */
   --primary-text-color: #757575;
   --title-text-color: #212121;
   --accent-color: #2196f3;
@@ -10,6 +9,7 @@
   --footer-bg-color: #2f303a;
   --accent-bg-color: #2196f3;
   --white-bg-color: #ffffff;
+  --social-bg-color: rgba(255, 255, 255, 0.1);
   /* FLEX-змінні */
   --project-list-gap: 30px;
   --section-padding-gap: 94px;
@@ -64,7 +64,11 @@ img {
   padding: 0 15px;
 }
 
-/* Верхня лінія сторінки Студія */
+/**
+  |============================
+  | Верхня лінія сторінки Студія
+  |============================
+*/
 .logo-web {
   color: #2196f3;
   text-decoration: none;
@@ -116,6 +120,12 @@ img {
   color: var(--accent-color);
 }
 
+.envelope,
+.smartphone {
+  fill: currentColor;
+  margin-right: 10px;
+}
+
 /* ФЛЕКС ХЕДЕРУ */
 
 .header-flex {
@@ -148,7 +158,7 @@ img {
   align-items: center;
 }
 
-/* Додаємо іконки */
+/* Додаємо іконки
 
 .header .mail::before,
 .header .tel::before {
@@ -167,11 +177,19 @@ img {
 }
 .mail::before {
   background-image: url(../images/icons/envelope.svg);
-}
+} */
 
-/* Основний контент сторінки Студія */
+/**
+  |============================
+  | Основний контент сторінки Студія
+  |============================
+*/
 
-/* Герой */
+/**
+  |============================
+  | Герой
+  |============================
+*/
 
 .hero {
   padding-top: 200px;
@@ -183,6 +201,7 @@ img {
   min-height: 600px;
   background-color: #2f303a;
   text-align: center;
+
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url(../images/bg-images/hero-bg.jpg);
   background-size: cover;
@@ -224,7 +243,11 @@ img {
   letter-spacing: 0.06em;
 }
 
-/* Основний контент Студія-Особливості */
+/**
+  |============================
+  | Студія-Особливості
+  |============================
+*/
 
 .section-features {
   margin-top: 0;
@@ -289,7 +312,11 @@ img {
   background-image: url(../images/icons/astronaut.svg);
 }
 
-/* "Чим ми займаємося" AND "Наша команда" */
+/**
+  |============================
+  | "Чим ми займаємося" AND "Наша команда"
+  |============================
+*/
 
 .section-work h2,
 .section-team h2,
@@ -331,6 +358,7 @@ img {
 
 .section-team p {
   margin-top: 10px;
+  margin-bottom: 16px;
 
   font-size: 16px;
   line-height: 1.19;
@@ -347,6 +375,41 @@ img {
 
 .section-team .social-list {
   display: flex;
+  justify-content: center;
+}
+
+.section-team .social-icons {
+  fill: currentColor;
+
+  /* **************************** */
+  /* padding: 12px; */
+}
+
+.section-team .social-item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.section-team .social-link {
+  /* display: inline-flex; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 44px;
+  height: 44px;
+
+  border-radius: 50%;
+}
+
+.section-team .social-link:hover,
+.section-team .social-link:focus {
+  background-color: var(--accent-bg-color);
+  cursor: pointer;
+}
+
+.section-team .social-icons:hover,
+.section-team .social-icons:focus {
+  fill: var(--white-text-color);
 }
 
 /* FLEX Чим займаємося та команда */
@@ -362,7 +425,11 @@ img {
   margin-right: 30px;
 }
 
-/* СЕКЦІЯ КЛІЄНТИ */
+/**
+  |============================
+  | СЕКЦІЯ КЛІЄНТИ
+  |============================
+*/
 
 .section-clients {
   padding-top: var(--section-padding-gap);
@@ -377,7 +444,36 @@ img {
   margin-right: 30px;
 }
 
-/* Підвал сторінки */
+.section-clients .link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 170px;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+
+.client-icons {
+  fill: currentColor;
+}
+
+.section-clients .client-icons:hover,
+.section-clients .client-icons:focus {
+  fill: var(--accent-color);
+}
+
+.section-clients .link:hover,
+.section-clients .link:focus {
+  border: 1px solid var(--accent-color);
+}
+
+/**
+  |============================
+  | Підвал сторінки
+  |============================
+*/
 
 .footer {
   padding-top: 60px;
@@ -446,15 +542,21 @@ footer .logo-studio {
   margin-right: 10px;
 }
 
+/* Add icons socials */
+
+.footer .social-icons {
+  fill: var(--white-text-color);
+}
+
 .social .link {
-  display: block;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
   width: 44px;
   height: 44px;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: var(--social-bg-color);
 
-  background-size: 20px 20px;
-  background-position: center;
-  background-repeat: no-repeat;
   border-radius: 50%;
 }
 
@@ -464,27 +566,12 @@ footer .logo-studio {
   cursor: pointer;
 }
 
-.social .link.instagram {
-  background-image: url(../images/icons/instagram.svg);
-}
-.social .link.twitter {
-  background-image: url(../images/icons/twitter.svg);
-}
-.social .link.facebook {
-  background-image: url(../images/icons/facebook.svg);
-}
-.social .link.linkedin {
-  background-image: url(../images/icons/linkedin.svg);
-}
-
 /**
   |============================
   | Main content of a page Portfolio
   |============================
 */
-/**
-   |============================
-*/
+
 .filters .button {
   display: inline-block;
   padding: 6px 22px;
