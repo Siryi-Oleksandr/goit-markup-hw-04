@@ -304,35 +304,6 @@ img {
   margin-right: 30px;
 }
 
-/* Особливості іконки */
-
-.feature-icons {
-  fill: currentColor;
-}
-
-/* .feature-list .item::before {
-  content: '';
-  display: block;
-  height: 120px;
-  margin-bottom: 30px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 70px;
-  background-color: var(--secondary-bg-color);
-}
-.feature-list .item:nth-child(1):before {
-  background-image: url(../images/icons/antenna.svg);
-}
-.feature-list .item:nth-child(2):before {
-  background-image: url(../images/icons/clock.svg);
-}
-.feature-list .item:nth-child(3):before {
-  background-image: url(../images/icons/diagram.svg);
-}
-.feature-list .item:nth-child(4):before {
-  background-image: url(../images/icons/astronaut.svg);
-} */
-
 /**
   |============================
   | "Чим ми займаємося" AND "Наша команда"
@@ -371,6 +342,7 @@ img {
 .section-team h3 {
   color: var(--title-text-color);
 
+  margin-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
@@ -378,7 +350,6 @@ img {
 }
 
 .section-team p {
-  margin-top: 10px;
   margin-bottom: 16px;
 
   font-size: 16px;
@@ -389,6 +360,7 @@ img {
 .team-list .item {
   box-shadow: var(--shadow-studio);
   border-radius: 0px 0px 4px 4px;
+  background-color: var(--white-bg-color);
 }
 
 /* TEAM SOCIAL */
@@ -396,14 +368,10 @@ img {
 .section-team .social-list {
   display: flex;
   justify-content: center;
-}
-
-.section-team .social-item:not(:last-child) {
-  margin-bottom: 10px;
+  gap: 10px;
 }
 
 .section-team .social-link {
-  /* display: inline-flex; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -668,23 +636,10 @@ footer .logo-studio {
 .project-list {
   display: flex;
   flex-wrap: wrap;
-  margin-top: calc(-1 * var(--project-list-gap));
-  margin-left: calc(-1 * var(--project-list-gap));
+  gap: var(--project-list-gap);
 }
 
-.project-list > .list-item {
-  flex-basis: calc(100% / 3 - var(--project-list-gap));
-  margin-left: var(--project-list-gap);
-  margin-top: var(--project-list-gap);
-}
-
-/* альтернативна техніка */
-/* .project-list .list-item:not(:nth-child(3n)) {
-  margin-right: 30px;
-}
-.project-list .list-item:not(:nth-last-child(-n + 3)) {
-  margin-bottom: 30px;
-} */
+/* Приховування заголовків */
 
 .visually-hidden {
   position: absolute;
